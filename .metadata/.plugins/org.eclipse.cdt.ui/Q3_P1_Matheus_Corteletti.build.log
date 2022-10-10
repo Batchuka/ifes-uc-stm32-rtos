@@ -1,0 +1,16 @@
+20:07:11 **** Incremental Build of configuration Debug for project Q3_P1_Matheus_Corteletti ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:3: warning: implicit declaration of function '_HAL_TIM_SET_COMPARE' [-Wimplicit-function-declaration]
+   92 |   _HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 2499);
+      |   ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Q3_P1_Matheus_Corteletti.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/batchuka/Desktop/projetos/Q3_P1_Matheus_Corteletti/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Q3_P1_Matheus_Corteletti.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.10.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/home/batchuka/Desktop/projetos/Q3_P1_Matheus_Corteletti/Debug/../Core/Src/main.c:92: undefined reference to `_HAL_TIM_SET_COMPARE'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:64: Q3_P1_Matheus_Corteletti.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+20:07:12 Build Failed. 3 errors, 1 warnings. (took 466ms)
+
