@@ -55,7 +55,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint32_t adc_val;
+uint32_t adc_val;			// variável que armazena o valor da conversão
 /* USER CODE END 0 */
 
 /**
@@ -88,7 +88,7 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_ADC_Start_IT(&hadc1);		// inicia o ADC no modo de interrupção
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -206,7 +206,13 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_ADC_ConvClptCallback(ADC_HandleTypeDef* hadc){
+	adc_val = HAL_ADC_GetValue(&hadc1);
+	HAL_ADC_Stop_IT(&hadc1);
 
+	// reiniciar o ADC, pois a conversão contínua está desativada
+	HAL_ADC_Start_IT(&hadc1);
+}
 /* USER CODE END 4 */
 
 /**

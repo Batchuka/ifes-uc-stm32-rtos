@@ -1,0 +1,10 @@
+19:46:37 **** Incremental Build of configuration Debug for project Q1_Matheus_Corteletti ****
+make -j12 all 
+arm-none-eabi-size   Q1_Matheus_Corteletti.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10788	     20	   1692	  12500	   30d4	Q1_Matheus_Corteletti.elf
+Finished building: default.size.stdout
+ 
+
+19:46:37 Build Finished. 0 errors, 0 warnings. (took 322ms)
+
