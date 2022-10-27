@@ -880,3 +880,24 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-10-21 19:27:39.028
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2022-10-27 17:03:37.477 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-10-27 17:04:01.065
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-10-27 17:04:01.184
+!MESSAGE Log4j initialized with config file C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-10-27 17:04:09.207
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-10-27 17:07:15.709
+!MESSAGE Indexed 'MultipleConversions_SingleChannel_DMA' (17 sources, 78 headers) in 2.73 sec: 3,642 declarations; 13,147 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2022-10-27 17:19:10.839
+!MESSAGE Won't launch debug session since we failed to locate the binary.

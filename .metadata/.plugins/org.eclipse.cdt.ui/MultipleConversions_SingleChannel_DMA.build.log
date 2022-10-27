@@ -1,0 +1,10 @@
+17:20:17 **** Incremental Build of configuration Debug for project MultipleConversions_SingleChannel_DMA ****
+make -j12 all 
+arm-none-eabi-size   MultipleConversions_SingleChannel_DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8284	     20	   1708	  10012	   271c	MultipleConversions_SingleChannel_DMA.elf
+Finished building: default.size.stdout
+ 
+
+17:20:18 Build Finished. 0 errors, 0 warnings. (took 347ms)
+

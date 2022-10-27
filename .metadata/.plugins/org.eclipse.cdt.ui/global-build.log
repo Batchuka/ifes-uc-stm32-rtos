@@ -1,21 +1,21 @@
-19:56:44 **** Incremental Build of configuration Debug for project Q2_Matheus_Corteletti ****
+17:20:08 **** Incremental Build of configuration Debug for project MultipleConversions_SingleChannel_DMA ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Q2_Matheus_Corteletti.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\Q2_Matheus_Corteletti\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Q2_Matheus_Corteletti.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Q2_Matheus_Corteletti.elf
+arm-none-eabi-gcc -o "MultipleConversions_SingleChannel_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\MultipleConversions_SingleChannel_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MultipleConversions_SingleChannel_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MultipleConversions_SingleChannel_DMA.elf
  
-arm-none-eabi-size   Q2_Matheus_Corteletti.elf 
-arm-none-eabi-objdump -h -S  Q2_Matheus_Corteletti.elf  > "Q2_Matheus_Corteletti.list"
+arm-none-eabi-size   MultipleConversions_SingleChannel_DMA.elf 
+arm-none-eabi-objdump -h -S  MultipleConversions_SingleChannel_DMA.elf  > "MultipleConversions_SingleChannel_DMA.list"
    text	   data	    bss	    dec	    hex	filename
-   9884	     20	   1692	  11596	   2d4c	Q2_Matheus_Corteletti.elf
+   8284	     20	   1708	  10012	   271c	MultipleConversions_SingleChannel_DMA.elf
 Finished building: default.size.stdout
  
-Finished building: Q2_Matheus_Corteletti.list
+Finished building: MultipleConversions_SingleChannel_DMA.list
  
-19:56:48 **** Incremental Build of configuration Debug for project Q2_Matheus_Corteletti ****
+17:20:17 **** Incremental Build of configuration Debug for project MultipleConversions_SingleChannel_DMA ****
 make -j12 all 
-arm-none-eabi-size   Q2_Matheus_Corteletti.elf 
+arm-none-eabi-size   MultipleConversions_SingleChannel_DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-   9884	     20	   1692	  11596	   2d4c	Q2_Matheus_Corteletti.elf
+   8284	     20	   1708	  10012	   271c	MultipleConversions_SingleChannel_DMA.elf
 Finished building: default.size.stdout
  
