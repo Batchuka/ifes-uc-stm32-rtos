@@ -1,21 +1,30 @@
-17:20:08 **** Incremental Build of configuration Debug for project MultipleConversions_SingleChannel_DMA ****
+20:06:48 **** Incremental Build of configuration Debug for project I2C_e2prom ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "MultipleConversions_SingleChannel_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\MultipleConversions_SingleChannel_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MultipleConversions_SingleChannel_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: MultipleConversions_SingleChannel_DMA.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:104:87: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  104 |   HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDRESS, 0, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
+      |                                                                                       ^~~~~~
+../Core/Src/main.c:104:87: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+arm-none-eabi-gcc -o "I2C_e2prom.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\I2C_e2prom\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_e2prom.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: I2C_e2prom.elf
  
-arm-none-eabi-size   MultipleConversions_SingleChannel_DMA.elf 
-arm-none-eabi-objdump -h -S  MultipleConversions_SingleChannel_DMA.elf  > "MultipleConversions_SingleChannel_DMA.list"
+arm-none-eabi-size   I2C_e2prom.elf 
+arm-none-eabi-objdump -h -S  I2C_e2prom.elf  > "I2C_e2prom.list"
    text	   data	    bss	    dec	    hex	filename
-   8284	     20	   1708	  10012	   271c	MultipleConversions_SingleChannel_DMA.elf
+  10792	     20	   1724	  12536	   30f8	I2C_e2prom.elf
 Finished building: default.size.stdout
  
-Finished building: MultipleConversions_SingleChannel_DMA.list
+Finished building: I2C_e2prom.list
  
-17:20:17 **** Incremental Build of configuration Debug for project MultipleConversions_SingleChannel_DMA ****
+20:06:58 **** Incremental Build of configuration Debug for project I2C_e2prom ****
 make -j12 all 
-arm-none-eabi-size   MultipleConversions_SingleChannel_DMA.elf 
+arm-none-eabi-size   I2C_e2prom.elf 
    text	   data	    bss	    dec	    hex	filename
-   8284	     20	   1708	  10012	   271c	MultipleConversions_SingleChannel_DMA.elf
+  10792	     20	   1724	  12536	   30f8	I2C_e2prom.elf
 Finished building: default.size.stdout
  
