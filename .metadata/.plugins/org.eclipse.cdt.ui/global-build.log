@@ -1,30 +1,42 @@
-20:06:48 **** Incremental Build of configuration Debug for project I2C_e2prom ****
+18:21:54 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:104:87: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  104 |   HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDRESS, 0, I2C_MEMADD_SIZE_16BIT, (uint8_t*)wmsg, strlen(wmsg)+1, HAL_MAX_DELAY);
-      |                                                                                       ^~~~~~
-../Core/Src/main.c:104:87: warning: incompatible implicit declaration of built-in function 'strlen'
-../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strlen'
-   20 | #include "main.h"
-  +++ |+#include <string.h>
-   21 | 
-arm-none-eabi-gcc -o "I2C_e2prom.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\I2C_e2prom\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="I2C_e2prom.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: I2C_e2prom.elf
- 
-arm-none-eabi-size   I2C_e2prom.elf 
-arm-none-eabi-objdump -h -S  I2C_e2prom.elf  > "I2C_e2prom.list"
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
    text	   data	    bss	    dec	    hex	filename
-  10792	     20	   1724	  12536	   30f8	I2C_e2prom.elf
+  10308	    120	   1744	  12172	   2f8c	MPU-6050-with-I2C.elf
 Finished building: default.size.stdout
  
-Finished building: I2C_e2prom.list
- 
-20:06:58 **** Incremental Build of configuration Debug for project I2C_e2prom ****
+18:22:01 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
 make -j12 all 
-arm-none-eabi-size   I2C_e2prom.elf 
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
    text	   data	    bss	    dec	    hex	filename
-  10792	     20	   1724	  12536	   30f8	I2C_e2prom.elf
+  10308	    120	   1744	  12172	   2f8c	MPU-6050-with-I2C.elf
+Finished building: default.size.stdout
+ 
+18:23:40 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MPU-6050-with-I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Mathe\Desktop\projetos\STM-ARM32-IFES\MPU-6050-with-I2C\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPU-6050-with-I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MPU-6050-with-I2C.elf
+ 
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
+arm-none-eabi-objdump -h -S  MPU-6050-with-I2C.elf  > "MPU-6050-with-I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  11960	    120	   1744	  13824	   3600	MPU-6050-with-I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: MPU-6050-with-I2C.list
+ 
+18:29:41 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
+make -j12 all 
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11960	    120	   1744	  13824	   3600	MPU-6050-with-I2C.elf
+Finished building: default.size.stdout
+ 
+18:32:24 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
+make -j12 all 
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11960	    120	   1744	  13824	   3600	MPU-6050-with-I2C.elf
 Finished building: default.size.stdout
  

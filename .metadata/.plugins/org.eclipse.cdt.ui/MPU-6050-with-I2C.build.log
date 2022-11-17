@@ -1,0 +1,10 @@
+18:32:24 **** Incremental Build of configuration Debug for project MPU-6050-with-I2C ****
+make -j12 all 
+arm-none-eabi-size   MPU-6050-with-I2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11960	    120	   1744	  13824	   3600	MPU-6050-with-I2C.elf
+Finished building: default.size.stdout
+ 
+
+18:32:24 Build Finished. 0 errors, 0 warnings. (took 400ms)
+
