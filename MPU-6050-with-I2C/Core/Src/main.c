@@ -93,16 +93,18 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  printf("começando");
+
   HAL_StatusTypeDef ret = HAL_I2C_IsDeviceReady(&hi2c1, 0b1101000 <<1,1,100);
   if (ret == HAL_OK)
   {
-	  printf("Dispositivo está pronto \n");
+	  //Acender um LED
   }
-  else
-  {
-	  printf("Dispositivo não está pronto. Olhe os cabos! \n");
-  }
+
+  // write I2C into EPPRROM
+
+  //uint8_t temp_data = 0b00001000;
+  //ret = HAL_I2C_Mem_Write(&hi2c1, (0b1101000 << 1) + 0, 27, 1, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+
 
   /* USER CODE END 2 */
 
